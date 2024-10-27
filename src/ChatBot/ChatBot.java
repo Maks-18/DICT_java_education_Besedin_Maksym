@@ -34,9 +34,31 @@ public class ChatBot {
             System.out.println(i + "!");
         }
 
+        // Додаємо тест
+        System.out.println("Let's test your programming knowledge.");
+
+        while (true) {
+            System.out.println("Which language is primarily used for Android development?");
+            System.out.println("1. Swift");
+            System.out.println("2. Kotlin");
+            System.out.println("3. JavaScript");
+            System.out.println("4. Ruby");
+
+            int answer = scanner.nextInt();
+
+            if (answer == 2) {
+                System.out.println("Congratulations, that's the correct answer!");
+                break;
+            } else {
+                System.out.println("Please, try again.");
+            }
+        }
+
+        System.out.println("Goodbye, have a nice day!");
         scanner.close();
     }
 }
+
 
 
 
