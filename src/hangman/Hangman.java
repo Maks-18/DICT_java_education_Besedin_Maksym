@@ -1,26 +1,29 @@
 package hangman;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Hangman {
-    public static void main (String[] args){
+    public static void main(String[] args) {
         System.out.println("HANGMAN");
-        System.out.println("The game will be available soon");
 
-        //Встановити слово, яке потрібно вгадати
-        String wordToGuess = "java";
+       // list random words
+        String[] words = {"python", "java", "javascript", "kotlin"};
 
-        //Запитати гравця слово
-        System.out.println("what kind of word did i guess?");
+        //take random words
+        Random random = new Random();
+        String wordToGuess = words[random.nextInt(words.length)];
+
+        //ask player about word
+        System.out.println("Guess the word:");
         Scanner scanner = new Scanner(System.in);
         String userGuess = scanner.nextLine();
 
-        //Перевірка, чи правильна відповідь
+        //Check if the answer is correct
         if (userGuess.equals(wordToGuess)) {
-            System.out.print("You win");
+            System.out.println("You win!");
         } else {
-            System.out.println("You died");
-
+            System.out.println("You died :(");
         }
     }
 }
