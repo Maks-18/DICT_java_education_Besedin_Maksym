@@ -8,11 +8,15 @@ public class Hangman {
         System.out.println("HANGMAN");
 
        // list random words
-        String[] words = {"python", "java", "javascript", "kotlin"};
+        String[] words = {"python", "java", "javascript", "kotlin", "C++", "C#"};
 
         //take random words
         Random random = new Random();
         String wordToGuess = words[random.nextInt(words.length)];
+
+        // create a hint
+        String hint = wordToGuess.substring(0,2) + "-".repeat(wordToGuess.length() -2);
+        System.out.println(" Guess the word " + hint + ":");
 
         //ask player about word
         System.out.println("Guess the word:");
